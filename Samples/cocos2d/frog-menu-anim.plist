@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>idle</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>frog-idle0001.png</string>
+			<string>frog-idle0002.png</string>
+			<string>frog-idle0003.png</string>
+			<string>frog-idle0004.png</string>
+			<string>frog-idle0005.png</string>
+			<string>frog-idle0006.png</string>
+			<string>frog-idle0007.png</string>
+			<string>frog-idle0008.png</string>
+			<string>frog-idle0009.png</string>
+			<string>frog-idle0010.png</string>
+			<string>frog-idle0011.png</string>
+			<string>frog-idle0012.png</string>
+			<string>frog-idle0013.png</string>
+			<string>frog-idle0014.png</string>
+			<string>frog-idle0015.png</string>
+			<string>frog-idle0016.png</string>
+			<string>frog-idle0017.png</string>
+			<string>frog-idle0018.png</string>
+			<string>frog-idle0019.png</string>
+			<string>frog-idle0020.png</string>
+			<string>frog-idle0021.png</string>
+			<string>frog-idle0022.png</string>
+			<string>frog-idle0023.png</string>
+			<string>frog-idle0024.png</string>
+			<string>frog-idle0025.png</string>
+			<string>frog-idle0026.png</string>
+			<string>frog-idle0027.png</string>
+		</array>
+	</dict>
+	<key>ribbit</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>ribbit-frog0001.png</string>
+			<string>ribbit-frog0002.png</string>
+			<string>ribbit-frog0003.png</string>
+			<string>ribbit-frog0004.png</string>
+			<string>ribbit-frog0005.png</string>
+			<string>ribbit-frog0006.png</string>
+			<string>ribbit-frog0007.png</string>
+			<string>ribbit-frog0008.png</string>
+			<string>ribbit-frog0009.png</string>
+			<string>ribbit-frog0010.png</string>
+			<string>frog-idle0001.png</string>
+		</array>
+	</dict>
+</dict>
+</plist>

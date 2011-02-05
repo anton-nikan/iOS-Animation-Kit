@@ -1,0 +1,35 @@
+//
+//  AKHelpers.h
+//  AnimationKit
+//
+//  Created by nikan on 12/1/10.
+//  Copyright 2010 Anton Nikolaienko. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+
+@interface AKHelpers : NSObject {
+
+}
+
++ (CCSpriteFrame*)frameFromFile:(NSString*)file;
++ (NSArray*)imageFramesFromArray:(NSArray*)array;
++ (NSArray*)imageFramesFromPlist:(NSString*)plistFile;
++ (NSDictionary*)animationSetFromPlist:(NSString*)plistFile;
++ (void)applyAnimation:(NSDictionary*)anim toNode:(CCNode*)node;
++ (void)applyAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet toNode:(CCNode*)node;
++ (CCAction*)actionForAnimation:(NSDictionary*)anim;
++ (CCAction*)actionForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
++ (CCSpriteFrame*)initialFrameForAnimation:(NSDictionary*)anim;
++ (CCSpriteFrame*)initialFrameForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
+
++ (NSDictionary*)clipItemWithDictionary:(NSDictionary*)clipItemDict;
++ (NSDictionary*)animationClipFromPlist:(NSString*)plistFile;
++ (CCAction*)actionForAnimationClipItem:(NSDictionary*)clipItemDict withAnimationSet:(NSDictionary*)animSet;
++ (CCAction*)actionForAnimationClip:(NSDictionary*)clip;
++ (void)applyAnimationClip:(NSDictionary*)clip toNode:(CCNode*)node;
+
++ (NSDictionary*)animationSetOfClip:(NSDictionary*)animClip;
+
+@end

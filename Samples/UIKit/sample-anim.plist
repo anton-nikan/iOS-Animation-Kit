@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>eyes</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>eyes_half_closed.png</string>
+		</array>
+	</dict>
+	<key>mouth</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>invisible.png</string>
+			<string>mouth_01.png</string>
+			<string>mouth_02.png</string>
+			<string>mouth_01.png</string>
+		</array>
+		<key>Duration</key>
+		<real>0.3</real>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AnimationSet</key>
+	<string>frog-menu-anim.plist</string>
+	<key>Clip</key>
+	<dict>
+		<key>Type</key>
+		<string>Loop</string>
+		<key>Count</key>
+		<integer>0</integer>
+		<key>Item</key>
+		<dict>
+			<key>Type</key>
+			<string>Sequence</string>
+			<key>Items</key>
+			<array>
+				<dict>
+					<key>Type</key>
+					<string>Animation</string>
+					<key>Name</key>
+					<string>idle</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Animation</string>
+					<key>Name</key>
+					<string>ribbit</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>
