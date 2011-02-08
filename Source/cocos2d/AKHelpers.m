@@ -35,6 +35,24 @@
     return resArray;
 }
 
++ (NSArray*)imageFramesFromPattern:(NSDictionary*)patternDict
+{
+    NSString *patternString = [patternDict valueForKey:@"Format"];
+    NSNumber *startIdx = [patternDict valueForKey:@"StartIndex"];
+    NSNumber *endIdx = [patternDict valueForKey:@"EndIndex"];
+    
+    if (!patternString || !startIdx || !endIdx) return nil;
+    
+    NSMutableArray *resArray = [NSMutableArray array];
+    for (int i = [startIdx intValue]; i <= [endIdx intValue]; ++i) {
+        NSString *fileName = [NSString stringWithFormat:patternString, i];
+        CCSpriteFrame *img = [self frameFromFile:fileName];
+        [resArray addObject:img];
+    }
+    
+    return resArray;
+}
+
 + (NSArray*)imageFramesFromPlist:(NSString*)plistFile
 {
     NSString *localizedPath = [[NSBundle mainBundle] pathForResource:plistFile ofType:nil];
@@ -65,7 +83,17 @@
         NSDictionary *animSet = [animSetDict objectForKey:animName];
         
         NSArray *frameList = [animSet objectForKey:@"Frames"];
-        NSArray *imageList = [self imageFramesFromArray:frameList];
+        NSArray *imageList = nil;
+        if (frameList) {
+            imageList = [self imageFramesFromArray:frameList];
+        } else {
+            NSDictionary *framePattern = [animSet objectForKey:@"FramePattern"];
+            if (framePattern) {
+                imageList = [self imageFramesFromPattern:framePattern];
+            }
+        }
+        
+        if (!imageList) return nil;
         
         // Defaults
         NSNumber *durationNum = [animSet valueForKey:@"Duration"];
@@ -201,7 +229,7 @@
     NSDictionary *newItem = nil;
     if ([itemType isEqualToString:@"Sequence"]) {
         newItem = [self sequenceClipItemWithDictionary:clipItemDict];
-    } else if ([itemType isEqualToString:@"Loop"]) {
+    } else if ([itemType isEqualToString:@"Loop"] || [itemType isEqualToString:@"Repeat"]) {
         newItem = [self loopClipItemWithDictionary:clipItemDict];
     } else {
         newItem = [NSDictionary dictionaryWithDictionary:clipItemDict];

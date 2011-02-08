@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>jump</key>
+	<dict>
+		<key>FramePattern</key>
+		<dict>
+			<key>Format</key>
+			<string>level4-pink-jump-%04d.png</string>
+			<key>StartIndex</key>
+			<integer>1</integer>
+			<key>EndIndex</key>
+			<integer>20</integer>
+		</dict>
+	</dict>
+</dict>
+</plist>

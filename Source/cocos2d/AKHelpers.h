@@ -15,6 +15,7 @@
 
 + (CCSpriteFrame*)frameFromFile:(NSString*)file;
 + (NSArray*)imageFramesFromArray:(NSArray*)array;
++ (NSArray*)imageFramesFromPattern:(NSDictionary*)patternDict;
 + (NSArray*)imageFramesFromPlist:(NSString*)plistFile;
 + (NSDictionary*)animationSetFromPlist:(NSString*)plistFile;
 + (void)applyAnimation:(NSDictionary*)anim toNode:(CCNode*)node;
