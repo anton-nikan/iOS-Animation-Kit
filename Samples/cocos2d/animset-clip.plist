@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AnimationSet</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>level6-fr0001.png</string>
+			<string>level6-fr0002.png</string>
+		</array>
+		<key>Duration</key>
+		<integer>2</integer>
+	</dict>
+	<key>Clip</key>
+	<dict>
+		<key>Type</key>
+		<string>Repeat</string>
+		<key>Item</key>
+		<dict>
+			<key>Type</key>
+			<string>Sequence</string>
+			<key>Items</key>
+			<array>
+				<dict>
+					<key>Type</key>
+					<string>RandomDelay</string>
+					<key>MinValue</key>
+					<real>0.2</real>
+					<key>MaxValue</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Animation</string>
+					<key>Name</key>
+					<string>idle</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

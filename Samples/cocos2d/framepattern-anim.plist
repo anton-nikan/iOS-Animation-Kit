@@ -4,7 +4,7 @@
 <dict>
 	<key>jump</key>
 	<dict>
-		<key>FramePattern</key>
+		<key>Frames</key>
 		<dict>
 			<key>Format</key>
 			<string>level4-pink-jump-%04d.png</string>
