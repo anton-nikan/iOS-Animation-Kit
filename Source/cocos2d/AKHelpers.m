@@ -68,29 +68,18 @@
     return [self imageFramesFromArray:plist];
 }
 
-+ (NSDictionary*)animationSetFromPlist:(NSString*)plistFile
++ (NSDictionary*)animationSetFromDictionary:(NSDictionary*)animSetDict
 {
-    NSString *filePath = plistFile;
-    if (![filePath isAbsolutePath]) {
-        filePath = [[NSBundle mainBundle] pathForResource:plistFile ofType:nil];
-    }
-    
-    NSDictionary *animSetDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
-    if (!animSetDict) return nil;
-    
     NSMutableDictionary *resDict = [NSMutableDictionary dictionaryWithCapacity:animSetDict.count];
     for (NSString *animName in animSetDict) {
         NSDictionary *animSet = [animSetDict objectForKey:animName];
         
-        NSArray *frameList = [animSet objectForKey:@"Frames"];
         NSArray *imageList = nil;
-        if (frameList) {
+        id frameList = [animSet objectForKey:@"Frames"];
+        if ([frameList isKindOfClass:[NSArray class]]) {
             imageList = [self imageFramesFromArray:frameList];
-        } else {
-            NSDictionary *framePattern = [animSet objectForKey:@"FramePattern"];
-            if (framePattern) {
-                imageList = [self imageFramesFromPattern:framePattern];
-            }
+        } else if ([frameList isKindOfClass:[NSDictionary class]]) {
+            imageList = [self imageFramesFromPattern:frameList];
         }
         
         if (!imageList) return nil;
@@ -105,7 +94,7 @@
         if (!repeatNum) {
             repeatNum = [NSNumber numberWithInt:1];
         }
-
+        
         // Cocos2d anim objects:
         CCAnimation *anim = [CCAnimation animationWithFrames:imageList delay:[durationNum doubleValue] / imageList.count];
         [resDict setObject:[NSDictionary dictionaryWithObjectsAndKeys:
@@ -116,6 +105,19 @@
     }
     
     return resDict;
+}
+
++ (NSDictionary*)animationSetFromPlist:(NSString*)plistFile
+{
+    NSString *filePath = plistFile;
+    if (![filePath isAbsolutePath]) {
+        filePath = [[NSBundle mainBundle] pathForResource:plistFile ofType:nil];
+    }
+    
+    NSDictionary *animSetDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    if (!animSetDict) return nil;
+    
+    return [self animationSetFromDictionary:animSetDict];
 }
 
 + (CCAction*)actionForAnimation:(NSDictionary*)anim
@@ -248,12 +250,17 @@
     NSDictionary *animClipDict = [NSDictionary dictionaryWithContentsOfFile:filePath];
     if (!animClipDict) return nil;
 
-    NSString *animSetName = [animClipDict valueForKey:@"AnimationSet"];
-    if (!animSetName) return nil;
-    
-    NSDictionary *animSet = [self animationSetFromPlist:animSetName];
+    NSDictionary *animSet = nil;
+    id animationSet = [animClipDict objectForKey:@"AnimationSet"];
+    if ([animationSet isKindOfClass:[NSDictionary class]]) {
+        animSet = [self animationSetFromDictionary:animationSet];
+        if (!animSet) return nil;
+    } else if ([animationSet isKindOfClass:[NSString class]]) {
+        animSet = [self animationSetFromPlist:animationSet];
+        if (!animSet) return nil;
+    }
     if (!animSet) return nil;
-
+    
     NSDictionary *rootClipItemDict = [animClipDict objectForKey:@"Clip"];
     if (!rootClipItemDict) return nil;
     

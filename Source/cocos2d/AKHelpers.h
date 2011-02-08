@@ -17,6 +17,7 @@
 + (NSArray*)imageFramesFromArray:(NSArray*)array;
 + (NSArray*)imageFramesFromPattern:(NSDictionary*)patternDict;
 + (NSArray*)imageFramesFromPlist:(NSString*)plistFile;
++ (NSDictionary*)animationSetFromDictionary:(NSDictionary*)animSetDict;
 + (NSDictionary*)animationSetFromPlist:(NSString*)plistFile;
 + (void)applyAnimation:(NSDictionary*)anim toNode:(CCNode*)node;
 + (void)applyAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet toNode:(CCNode*)node;

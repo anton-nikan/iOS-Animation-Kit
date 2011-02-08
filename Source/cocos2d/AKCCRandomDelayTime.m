@@ -21,13 +21,14 @@
     if ((self = [super initWithDuration:maxDur])) {
         minDuration = minDur;
         maxDuration = maxDur;
+        self.duration = minDuration + CCRANDOM_0_1() * (maxDuration - minDuration);
     }
     return self;
 }
 
 -(void) startWithTarget:(id)aTarget
 {
-    //self.duration = minDuration + CCRANDOM_0_1() * (maxDuration - minDuration);
+    self.duration = minDuration + CCRANDOM_0_1() * (maxDuration - minDuration);
 	[super startWithTarget:aTarget];
 }
 
