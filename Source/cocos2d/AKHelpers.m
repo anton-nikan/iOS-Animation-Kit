@@ -175,6 +175,26 @@
     return [self initialFrameForAnimation:anim];
 }
 
++ (NSTimeInterval)durationOfAnimation:(NSDictionary*)anim
+{
+    int repeatCount = [[anim valueForKey:@"RepeatCount"] intValue];
+    CCAnimation *animation = [anim objectForKey:@"Animation"];
+    
+    if (repeatCount > 0) {
+        return animation.frames.count * animation.delay * repeatCount;
+    } else {
+        return INFINITY;
+    }
+}
+
++ (NSTimeInterval)durationOfAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet
+{
+    NSDictionary *anim = [animSet objectForKey:animName];
+    if (!anim) return 0.0;
+    
+    return [self durationOfAnimation:anim];
+}
+
 
 #pragma mark Animation Clip: Loading
 
