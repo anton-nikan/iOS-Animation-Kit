@@ -9,6 +9,7 @@
 #import "AKHelpers.h"
 #import "AKCCRandomSpawn.h"
 #import "AKCCRandomDelayTime.h"
+#import "AKCCSoundEffect.h"
 
 
 @implementation AKHelpers
@@ -198,6 +199,31 @@
 
 #pragma mark Animation Clip: Loading
 
++ (NSDictionary*)spawnClipItemWithDictionary:(NSDictionary*)dict
+{
+    NSArray *items = [dict objectForKey:@"Items"];
+    if (!items || items.count == 0) return nil;
+    
+    // Confluent spawn
+    if (items.count == 1) {
+        return [self clipItemWithDictionary:[items lastObject]];
+    }
+    
+    NSMutableArray *resItems = [NSMutableArray arrayWithCapacity:items.count];
+    for (NSDictionary *itemDict in items) {
+        NSDictionary *item = [self clipItemWithDictionary:itemDict];
+        if (item) {
+            [resItems addObject:item];
+        }
+    }
+    
+    NSDictionary *resDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"Spawn", @"Type",
+                             resItems, @"Items",
+                             nil];
+    return resDict;
+}
+
 + (NSDictionary*)sequenceClipItemWithDictionary:(NSDictionary*)sequenceDict
 {
     NSArray *items = [sequenceDict objectForKey:@"Items"];
@@ -251,6 +277,8 @@
     NSDictionary *newItem = nil;
     if ([itemType isEqualToString:@"Sequence"]) {
         newItem = [self sequenceClipItemWithDictionary:clipItemDict];
+    } else if ([itemType isEqualToString:@"Spawn"]) {
+        newItem = [self spawnClipItemWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"Loop"] || [itemType isEqualToString:@"Repeat"]) {
         newItem = [self loopClipItemWithDictionary:clipItemDict];
     } else {
@@ -296,10 +324,37 @@
 
 #pragma mark Animation Clip: Applying
 
++ (CCAction*)soundEffectActionWithDictionary:(NSDictionary*)clipItemDict
+{
+    NSString *soundFile = [clipItemDict valueForKey:@"File"];
+    return [AKCCSoundEffect actionWithEffectName:soundFile];
+}
+
 + (CCAction*)animationActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
 {
     NSString *animName = [clipItemDict valueForKey:@"Name"];
     return [self actionForAnimationWithName:animName fromSet:animSet];
+}
+
++ (CCAction*)spawnActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
+{
+    NSArray *items = [clipItemDict objectForKey:@"Items"];
+    
+    CCAction *rootAction = nil;
+    CCAction *prevAction = nil;
+    for (NSDictionary *itemDict in items) {
+        CCAction *itemAction = [self actionForAnimationClipItem:itemDict withAnimationSet:animSet];
+        if (itemAction) {
+            if (prevAction) {
+                prevAction = [CCSpawn actionOne:(CCFiniteTimeAction*)prevAction two:(CCFiniteTimeAction*)itemAction];
+            } else {
+                prevAction = itemAction;
+            }
+            rootAction = prevAction;
+        }
+    }
+    
+    return rootAction;
 }
 
 + (CCAction*)sequenceActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
@@ -370,6 +425,10 @@
     CCAction *newAction = nil;
     if ([itemType isEqualToString:@"Sequence"]) {
         newAction = [self sequenceActionWithDictionary:clipItemDict andAnimationSet:animSet];
+    } else if ([itemType isEqualToString:@"Spawn"]) {
+        newAction = [self spawnActionWithDictionary:clipItemDict andAnimationSet:animSet];
+    } else if ([itemType isEqualToString:@"SoundEffect"]) {
+        newAction = [self soundEffectActionWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"Animation"]) {
         newAction = [self animationActionWithDictionary:clipItemDict andAnimationSet:animSet];
     } else if ([itemType isEqualToString:@"Loop"]) {
