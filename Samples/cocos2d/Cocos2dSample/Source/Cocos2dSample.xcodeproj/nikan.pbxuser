@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* Cocos2dSample */ = {
+		activeExec = 0;
+		executables = (
+			F4BC0D0913140DB500A2116D /* Cocos2dSample */,
+		);
+	};
+	1F3B9A2B0EF2145700286867 /* Cocos2dSampleAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 2342}}";
+			sepNavSelRange = "{2839, 0}";
+			sepNavVisRange = "{2625, 413}";
+		};
+	};
+	1F3B9A820EF2151B00286867 /* Cocos2dSample_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 582}}";
+			sepNavSelRange = "{210, 0}";
+			sepNavVisRange = "{0, 276}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = F4BC0D0913140DB500A2116D /* Cocos2dSample */;
+		activeSDKPreference = iphonesimulator4.2;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Cocos2dSample */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* Cocos2dSample */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = F4BC0D2213140DCE00A2116D /* Code sense */;
+		executables = (
+			F4BC0D0913140DB500A2116D /* Cocos2dSample */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					793,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					807.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					794,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 320095003;
+			PBXWorkspaceStateSaveDate = 320095003;
+		};
+		perUserProjectItems = {
+			F4E9F192131443960026A0AF /* PBXTextBookmark */ = F4E9F192131443960026A0AF /* PBXTextBookmark */;
+			F4E9F193131443960026A0AF /* PlistBookmark */ = F4E9F193131443960026A0AF /* PlistBookmark */;
+			F4E9F194131443960026A0AF /* PlistBookmark */ = F4E9F194131443960026A0AF /* PlistBookmark */;
+			F4E9F195131443960026A0AF /* PlistBookmark */ = F4E9F195131443960026A0AF /* PlistBookmark */;
+			F4E9F196131443960026A0AF /* PlistBookmark */ = F4E9F196131443960026A0AF /* PlistBookmark */;
+			F4E9F197131443960026A0AF /* PlistBookmark */ = F4E9F197131443960026A0AF /* PlistBookmark */;
+			F4E9F1AC131444780026A0AF /* PlistBookmark */ = F4E9F1AC131444780026A0AF /* PlistBookmark */;
+			F4E9F1B5131444E90026A0AF /* PlistBookmark */ = F4E9F1B5131444E90026A0AF /* PlistBookmark */;
+			F4E9F1B9131444EB0026A0AF /* PlistBookmark */ = F4E9F1B9131444EB0026A0AF /* PlistBookmark */;
+			F4F6123813143685000BEDED /* PBXTextBookmark */ = F4F6123813143685000BEDED /* PBXTextBookmark */;
+			F4F6124A13143816000BEDED /* PBXTextBookmark */ = F4F6124A13143816000BEDED /* PBXTextBookmark */;
+		};
+		sourceControlManager = F4BC0D2113140DCE00A2116D /* Source Control */;
+		userBuildSettings = {
+			SYMROOT = "/Users/nikan/Projects/(build)/Cocos2dSample";
+		};
+	};
+	504DFC6810AF1739006D82FE /* LICENSE.cocos2d */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 390}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1189}";
+		};
+	};
+	504DFC6910AF1739006D82FE /* LICENSE.cocosdenshion */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1012, 390}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1106}";
+		};
+	};
+	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
+		activeExec = 0;
+	};
+	E02BB772126CC223006E46A2 /* CCActionInterval.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 17023}}";
+			sepNavSelRange = "{4113, 0}";
+			sepNavVisRange = "{3652, 584}";
+		};
+	};
+	E02BB78C126CC223006E46A2 /* CCDirector.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 4129}}";
+			sepNavSelRange = "{4797, 9}";
+			sepNavVisRange = "{4145, 1946}";
+		};
+	};
+	E02BB78D126CC223006E46A2 /* CCDirector.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 7376}}";
+			sepNavSelRange = "{2426, 10}";
+			sepNavVisRange = "{1949, 1086}";
+		};
+	};
+	E02BB7A4126CC224006E46A2 /* CCNode.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 12357}}";
+			sepNavSelRange = "{10590, 6}";
+			sepNavVisRange = "{10362, 820}";
+		};
+	};
+	E02BB7E0126CC224006E46A2 /* CCGL.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 1135}}";
+			sepNavSelRange = "{2392, 32}";
+			sepNavVisRange = "{1558, 1506}";
+		};
+	};
+	E02BB7EA126CC224006E46A2 /* EAGLView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1664, 2085}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3163, 1235}";
+		};
+	};
+	E02BB7EB126CC224006E46A2 /* EAGLView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 4377}}";
+			sepNavSelRange = "{761, 8}";
+			sepNavVisRange = "{0, 2312}";
+		};
+	};
+	E0F80F5F120A0182005866B8 /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 2194}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1017}";
+		};
+	};
+	F4BC0D0913140DB500A2116D /* Cocos2dSample */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Cocos2dSample;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	F4BC0D2113140DCE00A2116D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	F4BC0D2213140DCE00A2116D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F4E9F192131443960026A0AF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E02BB772126CC223006E46A2 /* CCActionInterval.m */;
+		name = "CCActionInterval.m: 175";
+		rLen = 0;
+		rLoc = 4113;
+		rType = 0;
+		vrLen = 584;
+		vrLoc = 3652;
+	};
+	F4E9F193131443960026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F6108413141F25000BEDED /* scene01-simpleclip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene01-simpleclip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F194131443960026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F610C813142354000BEDED /* scene02-soundclip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			Clip,
+			Item,
+			Items,
+			2,
+			Items,
+			0,
+			File,
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene02-soundclip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F195131443960026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F610D913142442000BEDED /* scene03-rndclip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			Clip,
+			Item,
+			Items,
+			1,
+			Item,
+			Items,
+			0,
+			File,
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene03-rndclip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F196131443960026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F610F21314269C000BEDED /* scene04-atlasclip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			Clip,
+			Item,
+			Items,
+			1,
+			Item,
+			Items,
+			0,
+			File,
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene04-atlasclip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F197131443960026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F6113C131429AE000BEDED /* scene05-idle-clip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			Clip,
+			Item,
+			Items,
+			1,
+			Item,
+			Items,
+			0,
+			File,
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene05-idle-clip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F1AC131444780026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F6113E131429C9000BEDED /* scene05-pop-clip.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			Clip,
+			Items,
+			0,
+			File,
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/scene05-pop-clip.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F1B5131444E90026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F610F713142717000BEDED /* character-atlas.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/character-atlas.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4E9F1B9131444EB0026A0AF /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = F4F610F713142717000BEDED /* character-atlas.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/nikan/Projects/Apple/Groups/Number7/AnimationKit/Public/Samples/cocos2d/Cocos2dSample/Source/Resources/Assets/character-atlas.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	F4F60FC913140E1C000BEDED /* AKCCSoundEffect.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 777}}";
+			sepNavSelRange = "{695, 0}";
+			sepNavVisRange = "{289, 238}";
+		};
+	};
+	F4F60FCB13140E1C000BEDED /* AKHelpers.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 6882}}";
+			sepNavSelRange = "{3031, 0}";
+			sepNavVisRange = "{2073, 1844}";
+		};
+	};
+	F4F60FDB13140EBA000BEDED /* SceneBase.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{286, 11}";
+			sepNavVisRange = "{0, 420}";
+		};
+	};
+	F4F60FDC13140EBA000BEDED /* SceneBase.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 1343}}";
+			sepNavSelRange = "{603, 0}";
+			sepNavVisRange = "{1044, 935}";
+		};
+	};
+	F4F60FEF13141030000BEDED /* Scene01.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{227, 0}";
+			sepNavVisRange = "{0, 234}";
+		};
+	};
+	F4F60FF013141030000BEDED /* Scene01.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{181, 768}";
+			sepNavVisRange = "{0, 955}";
+		};
+	};
+	F4F6103A131412B9000BEDED /* Scene02.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 390}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 234}";
+		};
+	};
+	F4F6103B131412B9000BEDED /* Scene02.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{287, 0}";
+			sepNavVisRange = "{0, 974}";
+		};
+	};
+	F4F6106213141CF9000BEDED /* blink0001.png */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 58}, {494, 720}}";
+		};
+	};
+	F4F6108613141F3A000BEDED /* character-animset.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 58}, {494, 720}}";
+		};
+	};
+	F4F610C813142354000BEDED /* scene02-soundclip.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 58}, {494, 720}}";
+		};
+	};
+	F4F610D61314240A000BEDED /* Scene03.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 390}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 234}";
+		};
+	};
+	F4F610D71314240A000BEDED /* Scene03.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 427}}";
+			sepNavSelRange = "{284, 0}";
+			sepNavVisRange = "{134, 626}";
+		};
+	};
+	F4F610E71314250E000BEDED /* Scene04.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 234}";
+		};
+	};
+	F4F610E81314250E000BEDED /* Scene04.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 539}}";
+			sepNavSelRange = "{290, 0}";
+			sepNavVisRange = "{134, 633}";
+		};
+	};
+	F4F610F21314269C000BEDED /* scene04-atlasclip.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 58}, {494, 720}}";
+		};
+	};
+	F4F6113913142926000BEDED /* Scene05.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{411, 0}";
+			sepNavVisRange = "{0, 418}";
+		};
+	};
+	F4F6113A13142926000BEDED /* Scene05.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 1379}}";
+			sepNavSelRange = "{1799, 0}";
+			sepNavVisRange = "{1097, 160}";
+		};
+	};
+	F4F6114013142A15000BEDED /* TouchTracker.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 595}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 979}";
+		};
+	};
+	F4F6120C131433A7000BEDED /* FinalScene.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 582}}";
+			sepNavSelRange = "{228, 0}";
+			sepNavVisRange = "{0, 240}";
+		};
+	};
+	F4F6120D131433A7000BEDED /* FinalScene.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {971, 483}}";
+			sepNavSelRange = "{699, 0}";
+			sepNavVisRange = "{74, 964}";
+		};
+	};
+	F4F6123813143685000BEDED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F4F60FDC13140EBA000BEDED /* SceneBase.m */;
+		name = "SceneBase.m: 36";
+		rLen = 0;
+		rLoc = 603;
+		rType = 0;
+		vrLen = 1997;
+		vrLoc = 362;
+	};
+	F4F6124A13143816000BEDED /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F4F6120D131433A7000BEDED /* FinalScene.m */;
+		name = "FinalScene.m: 23";
+		rLen = 0;
+		rLoc = 699;
+		rType = 0;
+		vrLen = 964;
+		vrLoc = 74;
+	};
+}

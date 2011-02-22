@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>blink</key>
+	<dict>
+		<key>Frames</key>
+		<array>
+			<string>blink0001.png</string>
+			<string>blink0002.png</string>
+			<string>blink0003.png</string>
+			<string>blink0004.png</string>
+			<string>blink0005.png</string>
+			<string>blink0006.png</string>
+			<string>blink0007.png</string>
+			<string>ribbit0001.png</string>
+		</array>
+	</dict>
+	<key>ribbit</key>
+	<dict>
+		<key>Frames</key>
+		<dict>
+			<key>Format</key>
+			<string>ribbit00%02d.png</string>
+			<key>StartIndex</key>
+			<string>1</string>
+			<key>EndIndex</key>
+			<string>8</string>
+		</dict>
+	</dict>
+	<key>pop</key>
+	<dict>
+		<key>Frames</key>
+		<dict>
+			<key>Format</key>
+			<string>pop-00%02d.png</string>
+			<key>StartIndex</key>
+			<string>1</string>
+			<key>EndIndex</key>
+			<string>11</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

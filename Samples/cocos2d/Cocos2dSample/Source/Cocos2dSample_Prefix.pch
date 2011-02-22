@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'Cocos2dSample' target in the 'Cocos2dSample' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+    #import "cocos2d.h"
+    #import "SimpleAudioEngine.h"
+    #import "AnimationKit.h"
+#endif

@@ -1,33 +1,40 @@
 iOS Animation Kit Framework
 
-Current version: Draft 0.2 (emerging).
+Current version: Draft 0.2.3 (emerging).
 
 Purpose:
 	- Format to describe frame animations (plist-based).
 	- Loading and playing frame animations.
 	- (Future)Tools to create frame animations.
 
-Classes:
+Public classes:
 	- AKHelpers: set of routines to load and apply animations.
 
 Features:
-	- for UIKit:
-		- Storing and loading animation sets.
-		- Running animation on UIImageView.
 	- for cocos2d:
 		- Storing and loading animation sets.
 		- Storing and loading animation clips.
 		- Running animations on CCNode with actions.
 		- Running animation clips on CCNode with actions.
 		- Custom actions to support animation clip elements:
-			- Sequence.
-			- Loop.
-			- RandomDelay.
-			- RandomItem.
-		  (cocos2d needs a patch to support delay changes in some elements).
+			- Sequence;
+			- Spawn;
+			- Loop/Repeat;
+			- Delay;
+			- RandomDelay;
+			- RandomItem;
+			- SoundEffect.
+		  (cocos2d needs a patch to support delay changes in some elements; marked in code as AKCCFIX).
+	- for UIKit:
+		- Storing and loading animation sets.
+		- Running animation on UIImageView.
 	
 Samples:
+	- Cocos2dSample: set of scenes with different use-cases of animation clips.
 	- Sample plist files with available animation set and clip descriptions.
 
+
+Copyright (C) 2010-2011 by Anton Nikolaienko.
+http://github.com/anton-nikan/iOS-Animation-Kit
 
 * cocos2d is a framework by Ricardo Quesada at http://www.cocos2d-iphone.org

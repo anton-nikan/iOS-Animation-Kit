@@ -81,6 +81,11 @@
         NSDictionary *animSet = [animSetDict objectForKey:animName];
         
         // Preloading atlases
+        NSString *atlas = [animSet objectForKey:@"Atlas"];
+        if (atlas) {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:atlas];
+        }
+        
         NSArray *atlasList = [animSet objectForKey:@"Atlases"];
         for (NSString *atlasFile in atlasList) {
             [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:atlasFile];
@@ -414,6 +419,12 @@
     return [AKCCRandomDelayTime actionWithMinDuration:[minValue doubleValue] maxDuration:[maxValue doubleValue]];
 }
 
++ (CCAction*)delayActionWithDictionary:(NSDictionary*)clipItemDict
+{
+    NSNumber *duration = [clipItemDict valueForKey:@"Duration"];
+    return [CCDelayTime actionWithDuration:[duration doubleValue]];
+}
+
 + (CCAction*)randomItemActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
 {
     NSArray *items = [clipItemDict objectForKey:@"Items"];
@@ -445,6 +456,8 @@
         newAction = [self animationActionWithDictionary:clipItemDict andAnimationSet:animSet];
     } else if ([itemType isEqualToString:@"Loop"]) {
         newAction = [self loopActionWithDictionary:clipItemDict andAnimationSet:animSet];
+    } else if ([itemType isEqualToString:@"Delay"]) {
+        newAction = [self delayActionWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"RandomDelay"]) {
         newAction = [self randomDelayActionWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"RandomItem"]) {
