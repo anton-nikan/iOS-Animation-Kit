@@ -18,10 +18,15 @@
 
 + (CCSpriteFrame*)frameFromFile:(NSString*)file
 {
-    UIImage *img = [UIImage imageNamed:file];
-    CCTexture2D *tex = [[CCTexture2D alloc] initWithImage:img];
-    CCSpriteFrame *spriteFrame = [CCSpriteFrame frameWithTexture:tex
-                                                            rect:CGRectMake(0, 0, tex.contentSizeInPixels.width, tex.contentSizeInPixels.height)];
+    CCSpriteFrame *spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:file];
+    if (!spriteFrame) {
+        UIImage *img = [UIImage imageNamed:file];
+        CCTexture2D *tex = [[CCTexture2D alloc] initWithImage:img];
+        spriteFrame = [CCSpriteFrame frameWithTexture:tex
+                            rect:CGRectMake(0, 0, tex.contentSize.width, tex.contentSize.height)];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFrame:spriteFrame name:file];
+    }
+    
     return spriteFrame;
 }
 
@@ -75,6 +80,13 @@
     for (NSString *animName in animSetDict) {
         NSDictionary *animSet = [animSetDict objectForKey:animName];
         
+        // Preloading atlases
+        NSArray *atlasList = [animSet objectForKey:@"Atlases"];
+        for (NSString *atlasFile in atlasList) {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:atlasFile];
+        }
+        
+        // Loading frames
         NSArray *imageList = nil;
         id frameList = [animSet objectForKey:@"Frames"];
         if ([frameList isKindOfClass:[NSArray class]]) {
