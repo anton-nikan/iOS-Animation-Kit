@@ -14,4 +14,7 @@
 
 }
 
++ (FinalScene*)nodeWithLevelIndex:(int)idx;
+- (FinalScene*)initWithIndex:(int)idx;
+
 @end

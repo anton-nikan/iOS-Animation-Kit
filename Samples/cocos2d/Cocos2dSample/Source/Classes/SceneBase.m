@@ -105,7 +105,7 @@
 
         [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[sceneClass node]]];
     } else {
-        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[FinalScene node]]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:0.5 scene:[FinalScene nodeWithLevelIndex:self.index + 1]]];
     }
 }
 

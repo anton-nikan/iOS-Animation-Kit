@@ -244,6 +244,9 @@
 		E02BB8B3126CC224006E46A2 /* ZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E02BB80D126CC224006E46A2 /* ZipUtils.h */; };
 		E02BB8B4126CC224006E46A2 /* ZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E02BB80E126CC224006E46A2 /* ZipUtils.m */; };
 		E0F80F60120A0182005866B8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F80F5F120A0182005866B8 /* RootViewController.m */; };
+		F48EF337131CF11E00233172 /* Scene06.m in Sources */ = {isa = PBXBuildFile; fileRef = F48EF336131CF11E00233172 /* Scene06.m */; };
+		F48EF33A131CF1EF00233172 /* scene06-idle-clip.plist in Resources */ = {isa = PBXBuildFile; fileRef = F48EF339131CF1EF00233172 /* scene06-idle-clip.plist */; };
+		F48EF33E131CF73F00233172 /* scene06-pop-clip.plist in Resources */ = {isa = PBXBuildFile; fileRef = F48EF33D131CF73F00233172 /* scene06-pop-clip.plist */; };
 		F4E9F18B1314432D0026A0AF /* blink.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4E9F18A1314432D0026A0AF /* blink.wav */; };
 		F4E9F18D131443360026A0AF /* ribbit.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4E9F18C131443360026A0AF /* ribbit.wav */; };
 		F4E9F18F1314433F0026A0AF /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = F4E9F18E1314433F0026A0AF /* pop.wav */; };
@@ -546,6 +549,10 @@
 		E0F80F5D120A0182005866B8 /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E0F80F5E120A0182005866B8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		E0F80F5F120A0182005866B8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F48EF335131CF11E00233172 /* Scene06.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene06.h; sourceTree = "<group>"; };
+		F48EF336131CF11E00233172 /* Scene06.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene06.m; sourceTree = "<group>"; };
+		F48EF339131CF1EF00233172 /* scene06-idle-clip.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene06-idle-clip.plist"; sourceTree = "<group>"; };
+		F48EF33D131CF73F00233172 /* scene06-pop-clip.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene06-pop-clip.plist"; sourceTree = "<group>"; };
 		F4E9F18A1314432D0026A0AF /* blink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blink.wav; sourceTree = "<group>"; };
 		F4E9F18C131443360026A0AF /* ribbit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ribbit.wav; sourceTree = "<group>"; };
 		F4E9F18E1314433F0026A0AF /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
@@ -1069,6 +1076,8 @@
 				F4F610E81314250E000BEDED /* Scene04.m */,
 				F4F6113913142926000BEDED /* Scene05.h */,
 				F4F6113A13142926000BEDED /* Scene05.m */,
+				F48EF335131CF11E00233172 /* Scene06.h */,
+				F48EF336131CF11E00233172 /* Scene06.m */,
 				F4F6120C131433A7000BEDED /* FinalScene.h */,
 				F4F6120D131433A7000BEDED /* FinalScene.m */,
 			);
@@ -1117,6 +1126,8 @@
 				F4F610F21314269C000BEDED /* scene04-atlasclip.plist */,
 				F4F6113C131429AE000BEDED /* scene05-idle-clip.plist */,
 				F4F6113E131429C9000BEDED /* scene05-pop-clip.plist */,
+				F48EF339131CF1EF00233172 /* scene06-idle-clip.plist */,
+				F48EF33D131CF73F00233172 /* scene06-pop-clip.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1294,6 +1305,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Anton Nikolaienko";
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Cocos2dSample" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -1367,6 +1381,8 @@
 				F4E9F18B1314432D0026A0AF /* blink.wav in Resources */,
 				F4E9F18D131443360026A0AF /* ribbit.wav in Resources */,
 				F4E9F18F1314433F0026A0AF /* pop.wav in Resources */,
+				F48EF33A131CF1EF00233172 /* scene06-idle-clip.plist in Resources */,
+				F48EF33E131CF73F00233172 /* scene06-pop-clip.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1392,6 +1408,7 @@
 				F4F6113B13142926000BEDED /* Scene05.m in Sources */,
 				F4F6114213142A15000BEDED /* TouchTracker.m in Sources */,
 				F4F6120E131433A7000BEDED /* FinalScene.m in Sources */,
+				F48EF337131CF11E00233172 /* Scene06.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

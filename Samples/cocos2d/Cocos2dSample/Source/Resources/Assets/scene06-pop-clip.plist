@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>AnimationSet</key>
+	<string>character-atlasanimset.plist</string>
+	<key>Clip</key>
+	<dict>
+		<key>Type</key>
+		<string>Sequence</string>
+		<key>Items</key>
+		<array>
+			<dict>
+				<key>Items</key>
+				<array>
+					<dict>
+						<key>File</key>
+						<string>pop.wav</string>
+						<key>Type</key>
+						<string>SoundEffect</string>
+					</dict>
+					<dict>
+						<key>Name</key>
+						<string>pop</string>
+						<key>Type</key>
+						<string>Animation</string>
+					</dict>
+				</array>
+				<key>Type</key>
+				<string>Spawn</string>
+			</dict>
+			<dict>
+				<key>Type</key>
+				<string>Tag</string>
+				<key>Name</key>
+				<string>respawn</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
 </plist>

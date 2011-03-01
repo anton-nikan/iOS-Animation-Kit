@@ -36,4 +36,6 @@
 
 + (NSDictionary*)animationSetOfClip:(NSDictionary*)animClip;
 
++ (void)setTagDelegate:(id)tagDelegate;
+
 @end

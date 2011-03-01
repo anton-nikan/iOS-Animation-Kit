@@ -14,6 +14,8 @@
 
 @implementation AKHelpers
 
+static id tagDelegate_ = nil;
+
 #pragma mark Animation Set Routines
 
 + (CCSpriteFrame*)frameFromFile:(NSString*)file
@@ -93,13 +95,18 @@
         
         // Loading frames
         NSArray *imageList = nil;
-        id frameList = [animSet objectForKey:@"Frames"];
-        if ([frameList isKindOfClass:[NSArray class]]) {
-            imageList = [self imageFramesFromArray:frameList];
-        } else if ([frameList isKindOfClass:[NSDictionary class]]) {
-            imageList = [self imageFramesFromPattern:frameList];
+
+        NSString *singleFrame = [animSet valueForKey:@"Frame"];
+        if (singleFrame) {
+            imageList = [NSArray arrayWithObject:[self frameFromFile:singleFrame]];
+        } else {
+            id frameList = [animSet objectForKey:@"Frames"];
+            if ([frameList isKindOfClass:[NSArray class]]) {
+                imageList = [self imageFramesFromArray:frameList];
+            } else if ([frameList isKindOfClass:[NSDictionary class]]) {
+                imageList = [self imageFramesFromPattern:frameList];
+            }
         }
-        
         if (!imageList) return nil;
         
         // Defaults
@@ -241,6 +248,29 @@
     return resDict;
 }
 
++ (NSDictionary*)randomSpawnClipItemWithDictionary:(NSDictionary*)dict
+{
+    NSArray *items = [dict objectForKey:@"Items"];
+    if (!items || items.count == 0) return nil;
+
+    NSMutableArray *resItems = [NSMutableArray arrayWithCapacity:items.count];
+    for (NSDictionary *chanceDict in items) {
+        NSDictionary *itemDict = [chanceDict objectForKey:@"Item"];
+        NSDictionary *item = [self clipItemWithDictionary:itemDict];
+        if (item) {
+            NSMutableDictionary *newChanceItem = [NSMutableDictionary dictionaryWithDictionary:chanceDict];
+            [newChanceItem setObject:item forKey:@"Item"];
+            [resItems addObject:newChanceItem];
+        }
+    }
+    
+    NSDictionary *resDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"RandomSpawn", @"Type",
+                             resItems, @"Items",
+                             nil];
+    return resDict;
+}
+
 + (NSDictionary*)sequenceClipItemWithDictionary:(NSDictionary*)sequenceDict
 {
     NSArray *items = [sequenceDict objectForKey:@"Items"];
@@ -298,6 +328,8 @@
         newItem = [self spawnClipItemWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"Loop"] || [itemType isEqualToString:@"Repeat"]) {
         newItem = [self loopClipItemWithDictionary:clipItemDict];
+    } else if ([itemType isEqualToString:@"RandomSpawn"] || [itemType isEqualToString:@"RandomItem"]) {
+        newItem = [self randomSpawnClipItemWithDictionary:clipItemDict];
     } else {
         newItem = [NSDictionary dictionaryWithDictionary:clipItemDict];
     }
@@ -425,7 +457,7 @@
     return [CCDelayTime actionWithDuration:[duration doubleValue]];
 }
 
-+ (CCAction*)randomItemActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
++ (CCAction*)randomSpawnActionWithDictionary:(NSDictionary*)clipItemDict andAnimationSet:(NSDictionary*)animSet
 {
     NSArray *items = [clipItemDict objectForKey:@"Items"];
     NSMutableArray *procItems = [NSMutableArray arrayWithCapacity:items.count];
@@ -440,6 +472,14 @@
     }
     
     return [AKCCRandomSpawn actionWithItems:procItems];
+}
+
++ (CCAction*)tagActionWithDictionary:(NSDictionary*)dict
+{
+    if (!tagDelegate_) return nil;
+    
+    NSString *tagName = [dict valueForKey:@"Name"];
+    return [CCCallFuncND actionWithTarget:tagDelegate_ selector:@selector(animationClipOnNode:reachedTagWithName:) data:tagName];
 }
 
 + (CCAction*)actionForAnimationClipItem:(NSDictionary*)clipItemDict withAnimationSet:(NSDictionary*)animSet
@@ -460,8 +500,10 @@
         newAction = [self delayActionWithDictionary:clipItemDict];
     } else if ([itemType isEqualToString:@"RandomDelay"]) {
         newAction = [self randomDelayActionWithDictionary:clipItemDict];
-    } else if ([itemType isEqualToString:@"RandomItem"]) {
-        newAction = [self randomItemActionWithDictionary:clipItemDict andAnimationSet:animSet];
+    } else if ([itemType isEqualToString:@"RandomSpawn"]) {
+        newAction = [self randomSpawnActionWithDictionary:clipItemDict andAnimationSet:animSet];
+    } else if ([itemType isEqualToString:@"Tag"]) {
+        newAction = [self tagActionWithDictionary:clipItemDict];
     }
     
     return newAction;
@@ -486,6 +528,15 @@
 + (NSDictionary*)animationSetOfClip:(NSDictionary*)animClip
 {
     return [animClip objectForKey:@"AnimationSet"];
+}
+
+
+#pragma mark -
+
++ (void)setTagDelegate:(id)tagDelegate
+{
+    [tagDelegate_ release];
+    tagDelegate_ = [tagDelegate retain];
 }
 
 @end

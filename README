@@ -1,6 +1,6 @@
 iOS Animation Kit Framework
 
-Current version: Draft 0.2.3 (emerging).
+Current version: Draft 0.2.4 (emerging).
 
 Purpose:
 	- Format to describe frame animations (plist-based).
@@ -22,8 +22,9 @@ Features:
 			- Loop/Repeat;
 			- Delay;
 			- RandomDelay;
-			- RandomItem;
-			- SoundEffect.
+			- RandomSpawn/RandomItem;
+			- SoundEffect;
+			- Tag.
 		  (cocos2d needs a patch to support delay changes in some elements; marked in code as AKCCFIX).
 	- for UIKit:
 		- Storing and loading animation sets.
