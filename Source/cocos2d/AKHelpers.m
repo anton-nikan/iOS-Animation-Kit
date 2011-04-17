@@ -200,6 +200,22 @@ static id tagDelegate_ = nil;
     return [self initialFrameForAnimation:anim];
 }
 
++ (CCSpriteFrame*)finalFrameForAnimation:(NSDictionary*)anim
+{
+    CCAnimation *ccanim = [anim objectForKey:@"Animation"];
+    if (!ccanim || ccanim.frames.count == 0) return nil;
+    
+    return [ccanim.frames lastObject];
+}
+
++ (CCSpriteFrame*)finalFrameForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet
+{
+    NSDictionary *anim = [animSet objectForKey:animName];
+    if (!anim) return nil;
+    
+    return [self finalFrameForAnimation:anim];
+}
+
 + (NSTimeInterval)durationOfAnimation:(NSDictionary*)anim
 {
     int repeatCount = [[anim valueForKey:@"RepeatCount"] intValue];

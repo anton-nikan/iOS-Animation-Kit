@@ -25,6 +25,8 @@
 + (CCAction*)actionForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
 + (CCSpriteFrame*)initialFrameForAnimation:(NSDictionary*)anim;
 + (CCSpriteFrame*)initialFrameForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
++ (CCSpriteFrame*)finalFrameForAnimation:(NSDictionary*)anim;
++ (CCSpriteFrame*)finalFrameForAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
 + (NSTimeInterval)durationOfAnimation:(NSDictionary*)anim;
 + (NSTimeInterval)durationOfAnimationWithName:(NSString*)animName fromSet:(NSDictionary*)animSet;
 
